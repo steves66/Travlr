@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>
-            This is our cool webpage
-        </title>
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
         </script>
+        <title>{{.PageTitle}}</title>
     </head>
 
     <script type="text/javascript">
@@ -25,7 +23,8 @@
             </form>
         {{end}}
 
-        {with $2:=.Answer}
+        {{with $2:=.Answer}}
          <p>Your answer is {{$2}}</p>
+         {{end}}
     </body>
 </html>
